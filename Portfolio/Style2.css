@@ -1,0 +1,64 @@
+/*Project*/
+.Packet
+{
+display: flex;
+justify-content: center;
+height : 100hv;
+align-items : center;
+}
+.container
+{
+display: flex;
+}
+.card {
+  height: 500px;
+  margin: 50px;
+  box-shadow: 5px 5px 20px black;
+  overflow: hidden;
+}
+
+
+.img {
+  height: 500px;
+  width: 350px;
+  border-radius: 3px;
+}
+.intro{
+  height: 70px;
+  width: 350px;
+ padding: 6px;
+ box-sizing: border-box;
+ position: absolute;
+ bottom : 240px;
+ background : rgb(27, 27, 27);
+ Color : white;
+ transition : -5s;
+}
+.Packet h1
+{
+margin : 10px;
+font-size: 40px;
+}
+.Packet p{
+  visibility: hidden;
+  color : chartreuse;
+  opacity: 0;
+}
+.card:hover
+{
+  cursor : pointer;
+
+}
+
+.card:hover .intro
+{
+height: 220px;
+bottom : 240px;
+background : black;
+}
+
+.card:hover .Packet p
+{
+  opacity: 1;
+  visibility: visible;
+}

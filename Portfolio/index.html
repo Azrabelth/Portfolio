@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio of Lorenzo De sisto</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+		<!-- La nav bar -->
+		<nav class="navbar">
+			<input type="checkbox" id="navbar-toggle" style="visibility: hidden;" >
+			<label for="navbar-toggle" class="menu-icon">&#9776;</label>
+			<ul class="menu">
+			  <li><a href="#home">Home</a></li>
+			  <li><a href="#cv">CV</a></li>
+			  <li><a href="#project">Project</a></li>
+			  <li><a href="#contact">Contact</a></li>
+			  <li><a href="#experience">Experience</a></li>
+			</ul>
+		  </nav>
+		  
+		<!-- Les sections de la page -->
+		<div class = "container">
+			
+			<div class ="slides slide1">
+				<div class="circle-container">
+					<img src="C:\Users\loren\Desktop\Portfolio\PP.jpg" alt="Votre image">
+				  </div>				  
+			<section id="home">
+				<h2>Home</h2>
+				<p>Hi, I'm Lorenzo De Sisto , a computer science engineering student  at CESI . My passion  for technology  started at a young age and has only grown stronger as I've delved deeper into the field. From programming languages  like c# and Python to software development and data structures , I've been exploring every facet of computer science. In my spare time,  I love to work on personal projects like building websites  and creating mobile applications. My ultimate goal is to use my skills to make a positive impact on society, whether that's through developing cutting-edge software  or finding innovative solutions to real-world problems. I'm always looking for new challenges  and opportunities to learn, so I'm excited to see where my career in computer science  will take me.
+				</p>
+			</section>
+			</div>
+
+			<div class ="slides slide2">
+				<section id="cv">
+					<h2>CV</h2>
+					download CV <a href="cv.pdf" download>here</a>
+					<p>Skills:<br>●Programminglanguages:C#,Python,C++,HTML,CSS,JavaScript<br>●Databasemanagementsystems:SQLServer,MySQL<br>●Operatingsystems:Windows,Linux
+						<br>●Softwaredevelopmenttools:Eclipse,NetBeans,VisualStudio</p>
+				</section>
+			</div>
+
+			<div  class = "slides slide3">
+				<section id="project">
+				<h2>project</h2>
+				<style>
+					/* Style pour le carousel */
+					.carousel {
+					  display: flex;
+					  justify-content: center;
+					}
+					
+					.carousel img {
+					  width: 150px;
+					  height: 150px;
+					  margin: 10px;
+					  cursor: pointer;
+					}
+					
+					/* Style pour la pop-up */
+					.popup {
+					  display: none;
+					  position: fixed;
+					  top: 0;
+					  left: 0;
+					  width: 100%;
+					  height: 100%;
+					  background-color: rgba(0, 0, 0, 0.5);
+					  z-index: 9999;
+					  color:black;
+					}
+					
+					.popup-content {
+					  position: absolute;
+					  top: 50%;
+					  left: 50%;
+					  transform: translate(-50%, -50%);
+					  background-color: #fff;
+					  padding: 20px;
+					  border-radius: 5px;
+					}
+					
+					.popup-close {
+					  position: absolute;
+					  top: 10px;
+					  right: 10px;
+					  cursor: pointer;
+					}
+				  </style>
+				</head>
+				<body>
+				  <div class="carousel">
+					<img src="image1.jpg" alt="AdminSI" onclick="openPopup('Texte de la pop-up 1')">
+					<img src="image2.jpg" alt="EasySave" onclick="openPopup('Texte de la pop-up 2')">
+					<img src="image3.jpg" alt="BigData" onclick="openPopup('Texte de la pop-up 3')">
+					<img src="image4.jpg" alt="Algorithm" onclick="openPopup('Texte de la pop-up 1')">
+					<img src="image5.jpg" alt="Twilight Monster" onclick="openPopup('Texte de la pop-up 2')">
+				  </div>
+				  
+				  <div class="popup" id="popup">
+					<div class="popup-content">
+					  <span class="popup-close" onclick="closePopup()">&times;</span>
+					  <p id="popup-text"></p>
+					</div>
+				  </div>
+				  
+				  <script>
+					// Fonction pour ouvrir la pop-up avec le texte spécifié
+					function openPopup(text) {
+					  document.getElementById('popup-text').textContent = text;
+					  document.getElementById('popup').style.display = 'block';
+					}
+					
+					// Fonction pour fermer la pop-up
+					function closePopup() {
+					  document.getElementById('popup').style.display = 'none';
+					}
+				  </script>
+				 
+				</section>
+			</div>
+			<div  class = "slides slide4">
+				<section id="Experience">
+				<h2>Experience</h2>
+				<br>
+				<h3>Education</h3>
+				<p>Bachelor's degree in Computer Engineering from CESI_ ROUEN, 2025<br>
+					BTS SIO (Systems and Network Infrastructure) degree with a focus on Software Solutions and Applications Development from Saint Adjutor High School ,2021<br>
+					Baccalaureate degree in Economics and Social Sciences from Artiside Briand Highschool,2019</p>
+					<br>
+				<h3>Work Experience</h3>
+				<p>
+					Engineering Apprentice, Clinique Saint Hilaire, Rouen, France,2023- 2026<br>Worked on the development of the hospital's patient management system.
+					Assisted in the maintenance of the hospital's computer networks and systems.<br>
+					Participated in the design and implementation of various software solutions for the hospital.<br>
+					Web Developer,Les Jeunes Agriculteur de l’Eure:, Evreux, Jannuary- febuary 2021<br>
+					Designed and developed a responsive website for the organization using HTML, CSS, and JavaScript<br>
+					Implemented a content management system (CMS) using WordPress and customized it to fit the client's needs<br>
+					Created a database to manage member registration, event scheduling, and communication using MySQL and PHP<br>
+					</p>
+				</section>
+			</div>
+
+			<!--Contact Session-->
+			<section id="contact">
+				<div class = "contact-section">
+					<div class = "inner-width">
+						<h1 >contact</h1>
+						<form action="send_email.php" method="POST">	
+							<input type = "text" class ="name" placeholder="Your Name" required>
+							<input type = "email" class ="email" placeholder="Your Email" required>
+							<textarea rows ="1" placeholder ="Message" class = "message" required></textarea>
+							<button type="submit">Send</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		<footer>
+			<ul class="social-links">
+			  <li><a  class="purple" href="https://www.instagram.com/Azrabelth">Instagram</a></li>
+			  <li><a  class="gray" href="https://github.com/Azrabelth">GitHub</a></li>
+			  <li><a  class="turquoise" href="https://twitter.com/Azrabelth">Twitter</a></li>
+			  <li><a  class="red" href="https://www.youtube.com/Azrabelth">YouTube</a></li>
+			  <li><a  class="navy" href="https://fr.linkedin.com/in/lorenzo-de-sisto-0b8266201">linkedin<a></li>
+				<li>| 07 83 34 26 74</li>
+			</ul>
+		  </footer>
+		</div>
+		<script src="script.js"></script>
+</body>
+</html>
